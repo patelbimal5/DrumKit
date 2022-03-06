@@ -5,13 +5,14 @@ for (var i=0; i<document.querySelectorAll(".drum").length; i++) {
       // alert("I got clicked");
       var thisButton = this.innerHTML;
       makeSound(thisButton);
-
+      buttonAnimation(thisButton);
   });
 }
 
 // -----------------key pressed------------------------
 document.addEventListener("keypress", function(event){
   makeSound(event.key)
+  buttonAnimation(event.key);
 });
 
 // -----------------pay sound function------------------------
@@ -48,4 +49,17 @@ function makeSound(key)
               break;
     default:
   }
+}
+
+
+function buttonAnimation(currentKey){
+    var activeButton = document.querySelector("." + currentKey);
+
+    activeButton.classList.add("pressed");
+
+    // setTimeout(function, milliseconds, param1, param2);
+
+    setTimeout(function(){
+      activeButton.classList.remove("pressed"); 
+    }, 100);
 }
