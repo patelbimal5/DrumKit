@@ -81,3 +81,15 @@ footer {
   margin: 10px;
   background-color: white;
 }
+
+.iconfooter{
+  color:#8D8DAA;
+  font-size: 1.5rem;
+  height: 10% !important;
+  width: 10% !important;
+  padding: 5px !important;
+  margin: 5px;
+}
+.iconfooter:hover{
+  color:#EEEEEE;
+}
